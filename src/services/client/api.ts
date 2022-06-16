@@ -7,7 +7,7 @@ export function setupAPI(ctx?: GetServerSidePropsContext) {
   const { '@NozBooks': accessToken } = parseCookies(ctx);
 
   const api = axios.create({
-    baseURL: 'https://books.appnoz.com.br/api/v1'
+    baseURL: 'http://books.appnoz.com.br/api/v1'
   });
 
   if (accessToken) {
