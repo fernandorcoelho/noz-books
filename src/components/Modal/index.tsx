@@ -26,23 +26,6 @@ export const Modal = ({
     }
   };
 
-  const keyPress = useCallback(
-    (e) => {
-      if (e.key === showModal) {
-        toggleModal();
-      }
-    },
-    [showModal]
-  );
-
-  useEffect(() => {
-    document.addEventListener('keydown', keyPress);
-
-    return () => {
-      document.removeEventListener('keydown', keyPress);
-    };
-  }, [keyPress]);
-
   return (
     <AnimatePresence>
       {showModal && (
