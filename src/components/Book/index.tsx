@@ -33,7 +33,7 @@ export const Book = ({ item }: IBookProps) => {
                 Idioma <div>{item.language}</div>
               </li>
               <li>
-                Título Original <div>Change By Design</div>
+                Título Original <div>{item.title}</div>
               </li>
               <li>
                 ISBN-10 <div>{item.isbn10}</div>
