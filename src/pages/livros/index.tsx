@@ -56,12 +56,6 @@ export default function BooksPage({
   }, [page]);
 
   const handleOpenModal = (book: IBook) => {
-    if (!showModal) {
-      document.body.style.overflow = 'hidden';
-    } else {
-      document.body.style.overflow = 'visible';
-    }
-
     setShowModal(!showModal);
     setSelectedBook(book);
   };
@@ -70,6 +64,14 @@ export default function BooksPage({
     setShowModal(false);
     setSelectedBook(undefined);
   };
+
+  useEffect(() => {
+    if (showModal) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'visible';
+    }
+  }, [showModal]);
 
   return (
     <>
