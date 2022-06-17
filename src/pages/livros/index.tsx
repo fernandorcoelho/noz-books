@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { toast } from 'react-toastify';
 
 import { GetServerSideProps } from 'next';
 import Image from 'next/image';
@@ -89,9 +90,27 @@ export default function BooksPage({
 
       removeAuthentication();
 
+      toast('🦄 Logout efetuado. Volte sempre :)', {
+        position: 'top-right',
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined
+      });
+
       router.push('/');
     } catch (err) {
-      alert('Erro ao deslogar');
+      toast.error('Erro ao efetuar logout!', {
+        position: 'top-right',
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined
+      });
     }
   };
 

@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { AiOutlineLoading3Quarters as LoadingIcon } from 'react-icons/ai';
+import { toast } from 'react-toastify';
 
 import router from 'next/router';
 
@@ -38,11 +39,31 @@ export default function Login() {
 
       await authService.signIn(values);
 
+      toast('🦄 Login realizado com sucesso!', {
+        position: 'top-right',
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined
+      });
+
       router.push('/livros');
     } catch (err) {
       const error = err as AxiosError;
 
       setErrorRequest(error.message);
+
+      toast.error('Erro ao efetuar login!', {
+        position: 'top-right',
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined
+      });
 
       setTimeout(() => {
         setErrorRequest(null);
