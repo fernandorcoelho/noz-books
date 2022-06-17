@@ -34,6 +34,7 @@ Os usuários devem ser capazes de:
 - Identificar campos de Input em relação à e-mail e/ou senha obrigatório.
 - Identificar campos de Input em relação à senha e/ou email incorretos.
 - Botão de loading ao clicar no botão de Entrar.
+- Visualizar erro e sucesso ao logar e deslogar através do React-toastify
 - Visualizar Esqueleto da página enquanto a requisição é feita na API.
 - Visualizar os livros de forma dinâmica ao trocar as página.
 - Limite de 12 livros por página.
@@ -104,6 +105,7 @@ Os usuários devem ser capazes de:
 - Framer-motion
 - Styled-Components
 - Design responsivo
+- React-toastify
 
 ### Continuação dos desenvolvimentos
 
