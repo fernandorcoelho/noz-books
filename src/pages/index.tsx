@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
-import { AiOutlineLoading3Quarters } from 'react-icons/ai';
+import { AiOutlineLoading3Quarters as LoadingIcon } from 'react-icons/ai';
 
 import router from 'next/router';
 
@@ -58,13 +58,13 @@ export default function Login() {
         description="Bem-vindo(a) à Noz Books, o único lugar que você encontra os melhores livros para desenvolvimento pessoal e profissional."
         image="/images/favicon.png"
         url=""
-        keywords="noz books desenvolvimento pessoal profissional"
+        keywords="noz books desenvolvimento pessoal profissional login sign in"
       />
 
       <S.Main>
         <S.Section>
           <div>
-            <img src="images/white-logo.svg" alt="Logo Branca" />
+            <img src="images/white-logo.svg" alt="Logo branca Noz Boooks" />
             <p>Books</p>
           </div>
 
@@ -88,11 +88,7 @@ export default function Login() {
               {...register('password')}
               isButton={
                 <button type="submit" disabled={isLoading}>
-                  {isLoading ? (
-                    <AiOutlineLoading3Quarters size={20} />
-                  ) : (
-                    'Entrar'
-                  )}
+                  {isLoading ? <LoadingIcon size={20} /> : 'Entrar'}
                 </button>
               }
             />

@@ -36,7 +36,7 @@ class AuthService {
           case 401:
             throw new Error('Email e/ou senha incorretos.');
           case 500:
-            throw new Error('Infelizmente ocorreu um erro interno no servidor');
+            throw new Error('Infelizmente ocorreu um erro no servidor');
           default:
             throw new Error(error.response.statusText);
         }

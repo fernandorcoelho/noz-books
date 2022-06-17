@@ -4,7 +4,7 @@ import axios from 'axios';
 import { parseCookies } from 'nookies';
 
 export function setupAPI(ctx?: GetServerSidePropsContext) {
-  const { '@NozBooks': accessToken } = parseCookies(ctx);
+  const { '@NozBooks:accessToken': accessToken } = parseCookies(ctx);
 
   const api = axios.create({
     baseURL: 'http://books.appnoz.com.br/api/v1'

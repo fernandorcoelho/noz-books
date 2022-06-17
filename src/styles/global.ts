@@ -54,8 +54,9 @@ export const GlobalStyle = createGlobalStyle`
 
     --main: #2E63F7;
 
-    --purple-700: #B22E6F;
+    --purple-700: #AB2680;
 
+    --gray-50: ##E0E6EE;
     --gray-600: #999999;
     --gray-800: #333333;
     --gray-900: rgba(0, 0, 0, 0.32);
