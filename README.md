@@ -1,4 +1,4 @@
-# Noz Books.
+# Noz Books
 
 Esta é uma solução para o desafio Noz Books.
 
