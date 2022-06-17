@@ -7,12 +7,14 @@ interface PaginationProps {
 }
 
 export const Pagination = ({ page, setPage, totalPages }: PaginationProps) => {
+  // Avança uma página
   const handleNextPage = () => {
     if (page < totalPages) {
       setPage(page + 1);
     }
   };
 
+  // Retorna uma página
   const handlePreviousPage = () => {
     if (page > 1) {
       setPage(page - 1);

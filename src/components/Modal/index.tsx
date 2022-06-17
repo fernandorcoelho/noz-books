@@ -19,6 +19,7 @@ export const Modal = ({
 }: IModalProps) => {
   const modalRef = useRef();
 
+  // Fecha o modal
   const closeModal = (e) => {
     if (modalRef === e.target) {
       toggleModal();
@@ -40,7 +41,7 @@ export const Modal = ({
     return () => {
       document.removeEventListener('keydown', keyPress);
     };
-  }, []);
+  }, [keyPress]);
 
   return (
     <AnimatePresence>

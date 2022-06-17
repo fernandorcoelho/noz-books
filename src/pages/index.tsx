@@ -31,6 +31,7 @@ export default function Login() {
     resolver: yupResolver(signInSchema)
   });
 
+  // Realiza o login
   async function handleSignIn(values: IValuesFormSignIn) {
     try {
       setIsLoading(true);
@@ -57,7 +58,7 @@ export default function Login() {
         title="Login | Noz Books"
         description="Bem-vindo(a) à Noz Books, o único lugar que você encontra os melhores livros para desenvolvimento pessoal e profissional."
         image="/images/favicon.png"
-        url=""
+        url="https://noz-books.vercel.app/"
         keywords="noz books desenvolvimento pessoal profissional login sign in"
       />
 
